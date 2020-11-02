@@ -65,7 +65,6 @@ function Java() {
 
                   {/* JAVA COURSE LINKS HERE / FIND AND ADD LINK HERE */}
                   {/* machine learning */}
-                  <h2>hello</h2>
                   <a href="#" className="list-group-item list-group-item-action">Linkmon 1</a>
                   <a href="#" className="list-group-item list-group-item-action">Linkmon 2</a>
                   <a href="#" className="list-group-item list-group-item-action">Linkmon 3</a>
