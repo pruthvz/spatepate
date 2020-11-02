@@ -1,0 +1,44 @@
+/*======================
+    404 page
+=======================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+.page_404 {
+  padding: 40px 0;
+  background: #fff;
+  font-family: "Arvo", serif;
+}
+/* IMAGE */
+.page_404 img {
+  width: 100%;
+}
+
+/* SVG IMAGE LINK */
+.four_zero_four_bg {
+  background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+  height: 60vh;
+  background-position: center;
+}
+
+.four_zero_four_bg h1 {
+  font-size: 80px;
+  font-family: "Roboto", sans-serif;
+}
+
+.four_zero_four_bg h3 {
+  font-size: 80px;
+}
+/* 404 ERROR TITLE */
+.link_404 {
+  color: #fff !important;
+  padding: 10px 20px;
+  background: #39ac31;
+  border-radius: 25px;
+  margin: 20px 0;
+  display: inline-block;
+  text-decoration: none;
+}
+.contant_box_404 {
+  margin-top: -50px;
+}

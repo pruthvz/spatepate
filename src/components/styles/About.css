@@ -1,0 +1,201 @@
+/* Importing Fonts from Google Fontss */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+.team {
+  text-align: center;
+}
+
+/* About me stylings START */
+.section {
+  padding: 75px 0;
+}
+
+/* ABOUT ME TITLE */
+.section-title {
+  text-align: center;
+  font-size: 30px;
+  position: relative;
+  margin-bottom: 40px;
+  margin-top: 0;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* ABOUT THE TEAM STYLING START */
+.team .team-item {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.team .team-item figure {
+  position: relative;
+  overflow: hidden;
+}
+
+.team .team-item figure figcaption {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: rgba(9, 9, 9, 0.6);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.team .team-item figure figcaption .info {
+  position: absolute;
+  color: #fff;
+  float: left;
+  bottom: 10px;
+  left: 20px;
+  margin-left: -80px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.team .team-item figure:hover figcaption {
+  opacity: 1;
+}
+
+.team .team-item figure:hover figcaption .info {
+  margin-left: 0;
+}
+
+.team .team-item figure figcaption .info h3 {
+  font-size: 20px;
+}
+
+.team .team-item figure figcaption .info p {
+  color: #fff;
+}
+
+.team .team-item figure:hover figcaption .social {
+  margin-bottom: 0;
+}
+
+.team .team-item figure figcaption .social {
+  position: absolute;
+  float: right;
+  bottom: 28px;
+  margin-bottom: -80px;
+  right: 20px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.team .team-item figure figcaption .social a {
+  color: #fff;
+  font-size: 15px;
+  width: 36px;
+  height: 36px;
+  background: #c93945;
+  display: inline-block;
+  text-align: center;
+  line-height: 36px;
+  border-radius: 50%;
+}
+
+.profile-img {
+  height: 350px;
+}
+
+.team h4 {
+  font-size: 18px !important;
+}
+
+/* ABOUT THE TEAM STYLING END */
+
+/* About myself section CEO */
+.about-area {
+  padding-top: 5%;
+  background: rgb(247, 247, 247);
+  padding-bottom: 5%;
+}
+
+.about-img {
+  position: relative;
+}
+
+/* CEO IMAGE */
+.about-img img {
+  width: 100%;
+}
+
+.about-text {
+  padding-top: 12%;
+}
+/* TITLE */
+.about-text h2 {
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  font-size: 42px;
+  font-weight: 500;
+}
+/* SOME TEXT ABOUT THE CEO/FOUNDER */
+.about-text p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  color: rgb(106, 106, 106);
+}
+.about-text button {
+  padding: 8px 20px;
+  display: inline-block;
+}
+
+/* DOWNLOAD CV BUTTON TRANSITION */
+.cvBtn {
+  background-color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: 50px;
+  padding: 12px 36px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  outline: none !important;
+}
+.cvBtn {
+  background-color: black;
+  color: white;
+}
+.cvBtn:hover {
+  color: white;
+}
+.cvBtn:focus {
+  box-shadow: none;
+}
+.cvBtn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  background-color: #da192fe8;
+  height: 100%;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+.cvBtn:hover::before {
+  width: 100%;
+}
+
+/* TEAM IMAGE STYLING */
+.profile-img {
+  filter: grayscale(100%);
+}
+
+/* hiring people mssg */
+.message {
+  color: white;
+  padding: 18px;
+}

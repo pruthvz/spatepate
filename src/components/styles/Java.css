@@ -1,0 +1,17 @@
+.logo-img {
+  height: 150px;
+  position: relative;
+}
+
+.card-title {
+  color: white !important;
+}
+
+.list-group-item-action:hover {
+  background-color: rgba(0, 0, 0, 0.09);
+  transition: all 0.3s ease-in-out;
+}
+
+.list-group-item {
+  font-weight: 500 !important;
+}

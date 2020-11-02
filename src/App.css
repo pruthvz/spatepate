@@ -1,0 +1,38 @@
+/* Importing Fonts. */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@500&family=Montserrat&display=swap");
+/* Default Navbar stylings. */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+.navbar {
+  padding: 0.9rem !important;
+}
+
+.navbar-custom {
+  color: white !important;
+  background-color: #212121;
+  /* border-bottom: 1px solid #2f2f2f; */
+}
+
+#collasible-nav-dropdown {
+  /* background: rgb(213, 213, 213);
+  border-radius: 50px; */
+  color: white;
+}
+
+/* Navbar title/brand styling. */
+.navbar .navbar-brand {
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+.navbar-toggler {
+  border: none !important;
+  outline: none !important;
+}

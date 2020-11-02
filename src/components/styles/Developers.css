@@ -1,0 +1,28 @@
+/* =====DEVELOPER.CSS====  */
+/* =====DEVELOPER.CSS====  */
+
+.section-title p {
+  font-size: 18px !important;
+}
+
+.list-group-item {
+  font-weight: 600;
+  /* text-transform: uppercase; */
+}
+.fa-badge-check {
+  color: #17a2f2;
+  font-size: 14px;
+}
+
+.fa-check-circle {
+  color: #17a2f2;
+  font-size: 14px;
+}
+.no-order {
+  font-size: 10px;
+}
+
+.list-group .sub-headings {
+  font-size: 12px;
+  padding: 10px;
+}

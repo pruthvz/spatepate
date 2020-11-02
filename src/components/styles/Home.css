@@ -1,0 +1,478 @@
+/* Font import - Google fonts, applies for the rest :) */
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@500&family=Montserrat&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+/* Home section */
+.home-section {
+  background-color: #212121;
+  padding: 180px 0 200px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.home-section .home-content h1 {
+  font-size: 55px;
+  color: white;
+  font-weight: 700;
+  line-height: 60px;
+  margin: 0;
+}
+.home-section .home-content p {
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+/* Home button stylings */
+
+.mybtn1,
+.mybtn2 {
+  background-color: white;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: 50px;
+  padding: 12px 36px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.mybtn2 {
+  background-color: #d70d25;
+  color: white;
+}
+.mybtn2:hover {
+  color: white;
+}
+.mybtn1:focus,
+.mybtn2:focus {
+  box-shadow: none;
+}
+.mybtn1::before,
+.mybtn2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 100%;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+.mybtn2:hover::before,
+.mybtn1:hover::before {
+  width: 100%;
+}
+
+/* About product details stylings START */
+.section-title {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+/* Title styling */
+.section-title .title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  margin: 0 0 15px;
+  color: #d70d25;
+  position: relative;
+  padding: 5px 10px;
+  z-index: 1;
+}
+.section-title .title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #d70d25;
+  z-index: -1;
+  border-radius: 5px;
+  opacity: 0.1;
+}
+
+.section-title .subtitle {
+  font-size: 30px;
+  line-height: 38px;
+  color: #222222;
+  font-weight: 700;
+  margin: 0;
+}
+
+.bg-dark {
+  background-color: #212121 !important;
+}
+/* About product details stylings START */
+
+/* Coding images */
+.home-section .home-img img {
+  max-width: 450px;
+  width: 100%;
+  position: relative;
+  left: 150px;
+  top: -50px;
+}
+
+/* @keyframes productani01 {
+  0%,
+  100% {
+    transform: translateY(8px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+} */
+
+/* Shapes */
+.home-section .bg-shapes div {
+  position: absolute;
+  opacity: 0.1;
+}
+.home-section .bg-shapes div:nth-child(1) {
+  height: 100px;
+  width: 100px;
+  top: 20px;
+  left: 20%;
+  background: whitesmoke;
+  border-radius: 50%;
+  animation: shapeani01 5s linear infinite;
+}
+
+.home-section .bg-shapes div:nth-child(2) {
+  height: 100px;
+  width: 100px;
+  top: 40%;
+  left: calc(0% - 50px);
+  background: transparent;
+  border: 5px solid white;
+  animation: shapeani02 10s linear infinite;
+}
+
+.home-section .bg-shapes div:nth-child(3) {
+  height: 200px;
+  width: 200px;
+  top: 40%;
+  left: calc(100% - 100px);
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.08;
+  animation: shapeani03 7s linear infinite;
+}
+
+/* Shape anaimations */
+@keyframes shapeani01 {
+  0%,
+  100% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(50px);
+  }
+}
+@keyframes shapeani02 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes shapeani03 {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Image responsive */
+@media only screen and (max-width: 600px) {
+  .home-section .home-img img {
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+    left: 0;
+    top: 20px;
+    animation: productani01 5s linear infinite;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* About the site section stylings START */
+.about-section {
+  background-color: #f5f5f5;
+  padding: 140px 0;
+}
+
+.about-section .about-img {
+  margin: auto !important;
+}
+.about-section .about-img img {
+  max-width: 450px;
+  width: 100%;
+}
+
+.about-section .section-title {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.about-section .about-content p {
+  font-size: 16px;
+  line-height: 26px;
+  color: gray;
+  margin: 0;
+  font-weight: 400;
+}
+
+.about-section .about-content ul {
+  display: block;
+  margin: 30px 0 0;
+}
+.about-section .about-content ul li {
+  font-size: 16px;
+  line-height: 26px;
+  color: #555555;
+  margin-bottom: 15px;
+  font-weight: 400;
+  position: relative;
+  padding-left: 32px;
+}
+
+.about-section .about-content ul li i {
+  height: 25px;
+  width: 25px;
+  display: inline-block;
+  font-size: 16px;
+  text-align: center;
+  line-height: 26px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #d70d25;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/* About the site section stylings END */
+
+/* Features section stylings START */
+.features-section {
+  padding: 100px 0 150px;
+  color: white;
+}
+/* Features title */
+.section-title2 {
+  margin-bottom: 50px;
+  text-align: center;
+}
+.section-title2 .title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  margin: 0 0 15px;
+  color: white;
+  position: relative;
+  padding: 5px 10px;
+  z-index: 1;
+}
+.section-title2 .title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #d70d25;
+  z-index: -1;
+  border-radius: 5px;
+  opacity: 0.4;
+}
+
+.section-title2 .subtitle2 {
+  font-size: 30px;
+  line-height: 38px;
+  color: white;
+  font-weight: 700;
+  margin: 0;
+}
+
+.features-section .features-item {
+  box-shadow: 0 0 2px #dddde3;
+  padding: 40px 30px;
+  margin-bottom: 30px;
+  background-color: #ededef;
+  border-radius: 5px;
+  text-align: center;
+  color: black;
+  transition: all 0.5s ease;
+}
+
+.features-section .features-item:hover {
+  background: #d70d25;
+  transform: translateY(-10px);
+  box-shadow: none;
+}
+
+.features-section .features-item .icon {
+  margin-bottom: 25px;
+}
+/* Icon stylings */
+.features-section .features-item .icon i {
+  font-size: 40px;
+  display: inline-block;
+  color: #d70d25;
+  transition: all 0.5s ease;
+}
+/* Service title styling */
+.features-section .features-item h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #222222;
+  margin: 0 0 15px;
+  line-height: 30px;
+  transition: all 0.5s ease;
+}
+/* Service paragraph styling */
+.features-section .features-item p {
+  font-size: 16px;
+  line-height: 26px;
+  color: #555555;
+  margin: 0;
+  transition: all 0.5s ease;
+}
+
+.features-section .features-item:hover .icon i,
+.features-section .features-item:hover h3,
+.features-section .features-item:hover p {
+  color: white;
+}
+/* Features section stylings END */
+
+/* Newsletter section stylings START */
+.newsletter-section {
+  background-color: whitesmoke;
+  padding: 80px 0 80px;
+}
+/* Form styling --> YOUTUBE TUTORIAL */
+.newsletter-section .newsletter-form .form-group {
+  margin-bottom: 0;
+}
+.newsletter-section .newsletter-form .form-control {
+  height: 60px;
+  border-radius: 60px;
+  padding: 0 180px 0 30px;
+  outline: none;
+  color: #555555;
+  font-weight: 400;
+}
+.newsletter-section .newsletter-form .form-control:focus {
+  box-shadow: none;
+}
+.newsletter-section .newsletter-form .btn {
+  height: 48px;
+  position: absolute;
+  top: 6px;
+  right: 6px;
+}
+
+.newsletter-section .newsletter-form {
+  position: relative;
+}
+.form-control {
+  font-family: "Roboto", sans-serif;
+}
+/* Newsletter section stylings END */
+
+/* Footer section stylings START */
+.footer {
+  padding-top: 80px;
+  background-color: #212121;
+  text-align: center;
+  color: white;
+}
+/* Social Icons */
+.footer .footer-logo a {
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+  display: block;
+  margin: 0 0 15px;
+}
+/* text */
+.footer .footer-text p {
+  font-size: 16px;
+  line-height: 26px;
+  color: whitesmoke;
+  font-weight: 400;
+  margin: 0 0 25px;
+}
+/* Social icon stylings */
+.footer .footer-social-links {
+  margin-bottom: 80px;
+}
+.footer .footer-social-links a {
+  display: inline-block;
+  text-align: center;
+  margin: 0 4px;
+  text-decoration: none;
+}
+.footer .footer-social-links a i {
+  height: 40px;
+  width: 40px;
+  border: 1px solid white;
+  display: block;
+  color: white;
+  line-height: 38px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+.footer .footer-social-links a:hover i {
+  background-color: white;
+  color: black;
+}
+/* Copyright */
+.footer .copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 8px 15px;
+}
+.footer .copyright p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 26px;
+  color: white;
+  font-weight: 400;
+}
+
+.footer .footer-logo a {
+  text-decoration: none;
+}
+/* responsiveness  */
+@media only screen and (max-width: 900px) {
+  .about-section .section-title {
+    margin: 25px 0;
+  }
+}
+
+/* Footer section stylings END */
