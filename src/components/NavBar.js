@@ -35,7 +35,7 @@ function navBar() {
         className="navbar-custom"
         variant="dark"
       >
-        <Navbar.Brand href="/">spatepate</Navbar.Brand>
+        <Navbar.Brand href="/" className="navbar-brand" >spatepate</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">

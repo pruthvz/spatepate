@@ -36,3 +36,8 @@
   border: none !important;
   outline: none !important;
 }
+/* Remove this after if it doesn't look good. */
+.navbar-brand:hover {
+  color: rgb(251, 114, 114) !important;
+  transition: all 0.3s ease-in-out;
+}
