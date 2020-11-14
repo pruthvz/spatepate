@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
   Navbar,
@@ -25,7 +25,15 @@ import Developers from "./subpages/Developers";
 import Resource from "./subpages/Resources";
 
 // Navbar Function, with all the dropdowns and links. 
-function navBar() {
+const NavBar = props => {
+    const [show, setShow] = useState(false);
+  const showDropdown = (e)=>{
+      setShow(!show);
+  }
+  const hideDropdown = e => {
+      setShow(false);
+  }
+
   return (
     // page router. React bootstrap navbar.
     <Router>
@@ -34,14 +42,20 @@ function navBar() {
         expand="lg"
         className="navbar-custom"
         variant="dark"
+        // sticky="top"
       >
         <Navbar.Brand href="/" className="navbar-brand" >spatepate</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link href="/">Home</Nav.Link>
-            <NavDropdown title="Languages" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="/language/java">Java</NavDropdown.Item>
+            <NavDropdown title="Languages" id="collasible-nav-dropdown" 
+               show={show}
+               onMouseEnter={showDropdown} 
+               onMouseLeave={hideDropdown}>
+              <NavDropdown.Item href="/language/java">
+                Java
+              </NavDropdown.Item>
               <NavDropdown.Item href="/language/javascript">
                 Javascript
               </NavDropdown.Item>
@@ -112,4 +126,4 @@ function navBar() {
 
 
 
-export default navBar;
+export default NavBar;

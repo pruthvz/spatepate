@@ -1,33 +1,31 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 // Page deleted stylings import
 import "./styles/Pagedeleted.css"
 
 // 404 PAGE function START
 function Pagedeleted() {
+	// Allows the user to return back to the previous page.
+	let history = useHistory();
     return (
 		// CENTERED 
         <center>
 	<section className="page_404">
-		<div className="container">
-			<div className="row">	
-				<div className="col-sm-12 ">
-					<div className="col-sm-10 col-sm-offset-1  text-center">
-						<div className="four_zero_four_bg">
-							{/* PAGE TTILE */}
-							<h1 className="text-four">404</h1>
-						</div>
-				
-						{/* PAGE DESCRIPTION */}
-						<div className="contant_box_404">
-							<h3 className="h2">
-							Looks like you're lost
-							</h3>
-							<p>the page you are looking for is not available!</p>
-							
-							{/* LINK BACK TO THE LANDING PAGE /home */}
-							<a href="/" type="button" className="btn btn-success p-3">Go to Home</a>
-						</div>
-					</div>
+		<div id="notfound">
+			<div className="notfound">
+				<div className="notfound-bg">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+				<h1>oops!</h1>
+				<h2>Error 404 : Page Not Found</h2>
+				<button className="btn btn-secondary" onClick={() => history.goBack()} >go back</button>
+				<div className="notfound-social">
+					<a href="#"><i className="fab fa-instagram"></i></a>
+					<a href="#"><i className="fab fa-twitter"></i></a>
+					<a href="#"><i className="fab fa-linkedin"></i></a>
+					<a href="#"><i className="fab fa-youtube"></i></a>
 				</div>
 			</div>
 		</div>

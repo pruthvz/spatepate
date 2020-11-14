@@ -141,7 +141,10 @@ function About() {
 {/* ABOUT TEAM SECTION END */}
 
 {/* HIRING PEOPLE MESSAGE. */}
-<p className="text-center bg-primary message">I'm looking for more people, that are interested to help me out with this project. Please do contact my email, I'd love to see your interest in this small project.</p>
+<div className="alert alert-info text-center">
+    <p><strong>Hey, want to join the team?</strong></p>
+<strong>I'm looking for more people,</strong> that are interested to help me out with this project. Please do contact my email, I'd love to see your interest in this small project.
+</div>
 {/* <marquee behavior="scroll" direction="left">I'm looking for more people, that would be greatful to help me out with this project. Please do contact my email, I'd love to see your interest in this small project.</marquee> */}
 
 

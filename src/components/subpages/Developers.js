@@ -40,18 +40,20 @@ function Developers() {
             </div>
 
           {/* Developers list START */}
+          <p className="no-order alert alert-danger col-md-12">I love all these developers, so there is no particular order!</p>
           <div className="row">
             <div className="col-md-12">
               <div className="list-group">
                   <div className="list-group-item list-group-item-action disabled bg-danger card-title">
-                    Developers <p className="no-order">- No Particular Order</p>
+                    Developers 
+                    <p></p>
                   </div>
 
                   {/* YouTuber Name, with Verified Tick, re-directed link */}
-                  <div  className="list-group-item list-group-item-action">Dev Ed <i className="fas fa-check-circle"></i> <span className="sub-headings">-Learn web development, web design, 3d modelling, tools like figma and more without getting bored!</span>
+                  <div  className="list-group-item list-group-item-action">Dev Ed <i className="fas fa-check-circle"></i> <span className="sub-headings"> /Learn web development, web design, 3d modelling, tools like figma and more without getting bored!</span>
                   <a href="https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
 
-                  <div  className="list-group-item list-group-item-action">freeCodeCamp.org <i className="fas fa-check-circle"></i> <span className="sub-headings">-Learn to code for free.</span>
+                  <div  className="list-group-item list-group-item-action">freeCodeCamp.org <i className="fas fa-check-circle"></i> <span className="sub-headings">/Learn to code for free.</span>
                   <a href="https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
 
                   <div className="list-group-item list-group-item-action">Traversy Media <i className="fas fa-check-circle"></i>
@@ -138,6 +140,12 @@ function Developers() {
                   <div  className="list-group-item list-group-item-action">LearnCode.academy <i className="fas fa-check-circle"></i>
                   <a href="https://www.youtube.com/channel/UCVTlvUkGslCV_h-nSAId8Sw" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
 
+                  <div  className="list-group-item list-group-item-action">Awais Mirza
+                  <a href="https://www.youtube.com/channel/UCIKbbV7ae7LAWa8cGnvjSPA" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
+
+                  <div  className="list-group-item list-group-item-action">Caleb Curry
+                  <a href="https://www.youtube.com/user/CalebTheVideoMaker2" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
+
                   <div  className="list-group-item list-group-item-action">ENTER NAME
                   <a href="#" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
 
@@ -152,7 +160,7 @@ function Developers() {
             <div className="col-md-12">
               <div className="list-group">
                   <div className="list-group-item list-group-item-action disabled bg-danger card-title">
-                    Game Developers <p className="no-order">- No Particular Order</p>
+                    Game Developers 
                   </div>
 
                   {/* YouTuber Name, with Verified Tick, re-directed link */}
@@ -210,9 +218,9 @@ function Developers() {
                   <div  className="list-group-item list-group-item-action">ENTER NAME
                   <a href="#" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
 
-
+<br/>
                   {/* Godot Developers sub-list */}
-                  <div className="list-group-item list-group-item-action disabled bg-info card-title">
+                  <div className="list-group-item list-group-item-action disabled bg-custom card-title">
                     Godot Developers
                   </div>
                   <div  className="list-group-item list-group-item-action">HeartBeast
@@ -244,7 +252,7 @@ function Developers() {
             <div className="col-md-12">
               <div className="list-group">
                   <div className="list-group-item list-group-item-action disabled bg-danger card-title">
-                    UI/UX Designers <p className="no-order">- No Particular Order</p>
+                    UI/UX Designers 
                   </div>
 
                   {/* YouTuber Name, with Verified Tick, re-directed link */}
@@ -266,7 +274,7 @@ function Developers() {
             {/* UI/UX Designers END */}
 
                 {/* Add new developers that I've missed out */}
-                <p>If I've missed anyone please leave a comment</p>
+                <p className=" alert alert-danger p-2 col-md-12">If I've missed anyone please leave a comment</p>
 
           </div>
         </div>
