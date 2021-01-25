@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/spatepate/static/css/main.a6e2a4aa.chunk.css",
+    "main.js": "/spatepate/static/js/main.46175e6d.chunk.js",
+    "main.js.map": "/spatepate/static/js/main.46175e6d.chunk.js.map",
+    "runtime-main.js": "/spatepate/static/js/runtime-main.0e0a54b8.js",
+    "runtime-main.js.map": "/spatepate/static/js/runtime-main.0e0a54b8.js.map",
+    "static/css/2.d9ad5f5c.chunk.css": "/spatepate/static/css/2.d9ad5f5c.chunk.css",
+    "static/js/2.8b84c0f9.chunk.js": "/spatepate/static/js/2.8b84c0f9.chunk.js",
+    "static/js/2.8b84c0f9.chunk.js.map": "/spatepate/static/js/2.8b84c0f9.chunk.js.map",
+    "index.html": "/spatepate/index.html",
+    "precache-manifest.94908cf912d6e87530f6db5f74079ca1.js": "/spatepate/precache-manifest.94908cf912d6e87530f6db5f74079ca1.js",
+    "service-worker.js": "/spatepate/service-worker.js",
+    "static/css/2.d9ad5f5c.chunk.css.map": "/spatepate/static/css/2.d9ad5f5c.chunk.css.map",
+    "static/css/main.a6e2a4aa.chunk.css.map": "/spatepate/static/css/main.a6e2a4aa.chunk.css.map",
+    "static/js/2.8b84c0f9.chunk.js.LICENSE.txt": "/spatepate/static/js/2.8b84c0f9.chunk.js.LICENSE.txt",
+    "static/media/bitdegree.jpg": "/spatepate/static/media/bitdegree.39b330d2.jpg",
+    "static/media/code.jpg": "/spatepate/static/media/code.11d911b6.jpg",
+    "static/media/codecademy.png": "/spatepate/static/media/codecademy.5b78666d.png",
+    "static/media/coding.png": "/spatepate/static/media/coding.ad0df3ac.png",
+    "static/media/coursera.png": "/spatepate/static/media/coursera.f612e970.png",
+    "static/media/edx.jpg": "/spatepate/static/media/edx.cc696f6d.jpg",
+    "static/media/elon.jpg": "/spatepate/static/media/elon.41c83aef.jpg",
+    "static/media/elon2.jpg": "/spatepate/static/media/elon2.ad8e576f.jpg",
+    "static/media/founder.jpg": "/spatepate/static/media/founder.96863a3a.jpg",
+    "static/media/freecodecamp.png": "/spatepate/static/media/freecodecamp.48a892e5.png",
+    "static/media/person.svg": "/spatepate/static/media/person.fc65c014.svg",
+    "static/media/sololearn.png": "/spatepate/static/media/sololearn.2ccaca30.png",
+    "static/media/udemy.jpg": "/spatepate/static/media/udemy.0872a03f.jpg",
+    "static/media/w3schools.png": "/spatepate/static/media/w3schools.d94504b6.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0e0a54b8.js",
+    "static/css/2.d9ad5f5c.chunk.css",
+    "static/js/2.8b84c0f9.chunk.js",
+    "static/css/main.a6e2a4aa.chunk.css",
+    "static/js/main.46175e6d.chunk.js"
+  ]
+}
