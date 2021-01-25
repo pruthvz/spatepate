@@ -66,3 +66,51 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+<!-- DOING SOMETHING WITH THIS LEAVE IT HERE! -->
+
+    const [input, setInput] = useState("");
+    let languages = [
+        {name : "JavaScript", Des: "javascript is a tutorial", link: "https://www.google.com/"},
+        {name : "Java", Des: "java lol"},
+        {name : "Python", Des: "simple python"},
+        {name : "C++", Des: "gaming put"},
+    ]
+
+
+    const handleChange = (e) => {
+        e.preventDefault();
+        setInput(e.target.value);
+    }
+
+    if(input.length > 0){
+        languages = languages.filter((i) =>{
+            return i.name.match(input);
+        })
+    }
+
+// https://www.youtube.com/watch?v=xnn0c9ye02M&ab_channel=Arslan WATCH THIS CONTIUE
+
+    return (
+        <div>
+
+        <input type="text" placeholder="Search your language..." onChange={handleChange} value={input}/>
+        <div>
+            <h2 className="text-center">Free Tutorials</h2>
+        </div>
+        <div className="col-md-6">
+            <div className="list-group-item list-group-item-action disabled titleBg-python card-title">
+                Automation
+            </div>
+           {languages.map((lang,links, index)=>{
+               return <div className="list-group" key={index}>
+                   <a href={lang.link} target="_blank" rel="noopener noreferrer" className="list-group-item list-group-item-action">{lang.Des}<strong className="courseBy bg-light p-1 rounded m-1">{lang.name}</strong></a>
+                    </div>
+
+
+           })}
+        </div>
+        </div>
+    )
+
+}

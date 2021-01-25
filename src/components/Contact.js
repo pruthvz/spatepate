@@ -32,7 +32,7 @@ function Contact() {
         <div className="container-fluid text-center" style={{ height: "30vh" }}>
           <h1 className="title display-3">Contact us </h1>
           <p className="lead pb-4" style={{ fontWeight: "300" }}>
-            If you do find any issues please do contact us.  We will get back to you within 24 hours.
+            If you do find any issues please do contact us.  We will get back to you within <p className="badge badge-secondary">24 hours.</p>
           </p>
         </div>
       </header>
@@ -105,10 +105,10 @@ function Contact() {
               {/* Contact item start */}
               <div className="contact-item">
                 <div className="icon">
-                  <i className="fa fa-location-arrow"></i>
+                <i class="fas fa-share-alt"></i>
                 </div>
-                <h5>Location</h5>
-                <p>Lorem ipsum dolor sit.</p>
+                <h5>Follow us</h5>
+                <p>Follow our socials</p>
               </div>
               {/* Contact item End */}
               {/* Contact item start */}
@@ -123,10 +123,10 @@ function Contact() {
               {/* Contact item start */}
               <div className="contact-item">
                 <div className="icon">
-                  <i className="fa fa-phone"></i>
+                <i class="fas fa-clock"></i>
                 </div>
-                <h5>Call us on</h5>
-                <p>+44 123456789</p>
+                <h5>Support</h5>
+                <p>Ask your queries</p>
               </div>
               {/* Contact item End */}
             </div>

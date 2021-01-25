@@ -46,7 +46,7 @@ function About() {
                  <div className="about-text">
                     <h2>about me</h2> 
                     <div style={{color : "blue", fontFamily: "Montserrat"}} className="programmer mb-2"> <i className="fas fa-code"></i> Web Developer | Student</div>
-                    <p className="mb-2">I'm Pruthvi, the founder of spatepate. I'm very passionate in coding, I'm currently in University doing Computer Science and AI. I like to develop and design web pages in my spare time. spatepate was my first project, that I wanted to completed.</p>
+                    <p className="mb-2">I'm Pruthvi, the founder of spatepate. I'm very passionate in coding, I'm currently in College doing IT and Product Design as my courses. I like to develop and design web pages in my spare time. spatepate was my first project, that I wanted to completed. I want to use all my knowlege and try to make spatepate even better. I love to code, and desperate to learn new things.</p>
                     {/* Download My CV -ADD DOWNLOAD LINK TO CV. */}
                     <button className="cvBtn mt-2" href="#">Download CV</button> 
                  </div>
@@ -93,7 +93,7 @@ function About() {
             {/* TEAM MEMBER ONE end */}
 
             {/* TEAM MEMBER TWO start */}
-            <div className="col-md-4 col-sm-6 col-xs-12">
+            {/* <div className="col-md-4 col-sm-6 col-xs-12">
                 <div className="team-item">
                     <figure>
                     <img src={Elontwo} alt="" className="profile-img"></img>
@@ -102,7 +102,7 @@ function About() {
                                 <h3>Temta Swang</h3>
                                 <p>Web Designer</p>
                             </div>
-                            {/* Social Links */}
+               
                             <div className="social">
                                 <a href="#" className="twitter" data-abc="true"><i className="fab fa-twitter"></i></a>
                                 <a href="#" className="facebook" data-abc="true"><i className="fab fa-instagram"></i></a>
@@ -111,18 +111,18 @@ function About() {
                         </figcaption>
                     </figure>
                 </div>
-            </div>
+            </div> */}
             {/* TEAM MEMBER TWO end */}
 
             {/* TEAM MEMBER THREE start */}
             <div className="col-md-4 col-sm-6 col-xs-12">
                 <div className="team-item">
                     <figure>
-                        <img src={Elon} alt="" className="profile-img"></img>
+                        <img src="https://pbs.twimg.com/profile_images/716487122224439296/HWPluyjs.jpg" alt="" className="profile-img"></img>
                         <figcaption>
                             <div className="info">
-                                <h3>Michael Slater</h3>
-                                <p>Game Developer</p>
+                                <h3></h3>
+                                <p></p>
                             </div>
                             {/* Social Links */}
                             <div className="social">
@@ -140,18 +140,18 @@ function About() {
 </section>
 {/* ABOUT TEAM SECTION END */}
 
-{/* HIRING PEOPLE MESSAGE. */}
-<div className="alert alert-info text-center">
-    <p><strong>Hey, want to join the team?</strong></p>
-<strong>I'm looking for more people,</strong> that are interested to help me out with this project. Please do contact my email, I'd love to see your interest in this small project.
-</div>
+{/* HIRING PEOPLE MESSAGE. */} 
+<center>
+    <div className="badge badge-info text-center p-4 "> 
+        <h5><strong>Hey, want to join the team?</strong></h5>
+    <h6><strong>I'm looking for more people,</strong> that are interested to help me out with this project. Please do contact my email, I'd love to see your interest in this small project.</h6>
+    </div>
+</center>
 {/* <marquee behavior="scroll" direction="left">I'm looking for more people, that would be greatful to help me out with this project. Please do contact my email, I'd love to see your interest in this small project.</marquee> */}
 
 
 {/* IMAGE SLIDER COMING SOON */}
-<section className="team-img">
- <p>image slider yet to come</p>
-</section>
+<br />
     </div>
   );
 }

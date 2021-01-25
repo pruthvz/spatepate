@@ -34,10 +34,7 @@ function Home() {
               <div className="home-content">
                 <h1>Making your life easy to find tutorials</h1>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Maxime vel error obcaecati dolores sequi molestias consequatur
-                  perferendis ipsam perspiciatis iste fugit placeat, facilis ad
-                  quis minima possimus accusamus eligendi natus. lor
+                  spatepate will help you get started with the most beginner friendly tutorials to advanced. We hold no credit over the tutorials, the videos are credited along with all the documentation. We hope to search for the best tutorial, so you don't have to waste time.
                 </p>
                 <a href="#down" className="btn mybtn1">
                   Learn more
@@ -71,36 +68,30 @@ function Home() {
               <div className="section-title">
                 <h1 className="title">ABOUT PRODUCT</h1>
                 <h2 className="subtitle">
-                  finding you all the free courses and tutorials
+                  Finding you all the free courses and tutorials
                 </h2>
               </div>
               {/* Bullet pointed points */}
               <div className="about-content">
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Aliquam dolores aut eius nesciunt fugiat sit optio delectus
-                  officia recusandae minima laborum excepturi earum, illo
-                  accusantium modi atque. Aspernatur, repellendus at.
+                  We have looked at the most popular languages and have created a list of the best beginner friendly videos to the advanced tutorials. The programming languages are also categorised in what they can be used for.
                 </p>
                 <ul className="list-unstyled">
                   <li>
-                    <i className="fa fa-check"></i> we can help you get started
+                    <i className="fa fa-check"></i> We can help you get started with your project
                     with your project
                   </li>
                   <li>
-                    <i className="fa fa-check"></i> Lorem ipsum dolor sit amet
-                    consectetur.
+                    <i className="fa fa-check"></i> We will provide you with fast one click links.
                   </li>
                   <li>
-                    <i className="fa fa-check"></i> Lorem, ipsum dolor sit amet
-                    consectetur adipisicing.
+                    <i className="fa fa-check"></i> We have categorised the programming language for you.
                   </li>
                   <li>
-                    <i className="fa fa-check"></i> Lorem ipsum dolor sit amet.
+                    <i className="fa fa-check"></i> We have also linked the best creators and many more yet to be added.
                   </li>
                   <li>
-                    <i className="fa fa-check"></i> Lorem ipsum dolor sit amet
-                    consectetur, adipisicing elit.
+                    <i className="fa fa-check"></i> We've found few of the best resources to learn programming.
                   </li>
                 </ul>
               </div>
@@ -118,7 +109,7 @@ function Home() {
             <div className="col-lg-7">
               <div className="section-title2">
                 <h1 className="title">Our Services</h1>
-                <h2 className="subtitle2">Lorem ipsum dolor sit.</h2>
+                <h2 className="subtitle2">What we have for you.</h2>
               </div>
             </div>
           </div>
@@ -133,7 +124,7 @@ function Home() {
                 </div>
                 <h3>One Click</h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod?
+                  Quick and easy one click, that redirects to the tutorial.
                 </p>
               </div>
             </div>
@@ -146,7 +137,7 @@ function Home() {
                 </div>
                 <h3>Programming</h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod?
+                  spatepate is all about providing help in programming.
                 </p>
               </div>
             </div>
@@ -159,7 +150,7 @@ function Home() {
                 </div>
                 <h3>User Experience</h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod?
+                  We have created a great easy to use interface.
                 </p>
               </div>
             </div>
@@ -172,7 +163,7 @@ function Home() {
                 </div>
                 <h3>Communications</h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod?
+                  We will be providing a discussion page where you can chat to others.
                 </p>
               </div>
             </div>
@@ -185,7 +176,7 @@ function Home() {
                 </div>
                 <h3>Web Design</h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod?
+                  We have linked tutorials about Web Developer/Design too.
                 </p>
               </div>
             </div>
@@ -198,7 +189,7 @@ function Home() {
                 </div>
                 <h3>Support</h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod?
+                  24/7 Support if you need help or have any queries.
                 </p>
               </div>
             </div>
@@ -234,6 +225,7 @@ function Home() {
                     name=""
                     className="form-control"
                     placeholder="Enter Your Email"
+                    required
                   />
                 </div>
                 <button type="submit" className="btn mybtn2">

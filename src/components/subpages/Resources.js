@@ -7,6 +7,16 @@ import codecademy from "../../images/codecademy.png"
 import freecodecamp from "../../images/freecodecamp.png"
 import udemy from "../../images/udemy.jpg"
 import edx from "../../images/edx.jpg"
+import coursera from "../../images/coursera.png"
+import w3schools from "../../images/w3schools.png"
+import code from "../../images/code.jpg"
+import sololearn from "../../images/sololearn.png"
+import bitdegree from "../../images/bitdegree.jpg"
+
+
+
+
+
 
 
 
@@ -34,6 +44,21 @@ function Resources() {
                 <div className="container">
                     <br/>
                     {/* BOOTSTRAP CARDS */}
+
+                    {/* BitDegree */}
+                    <div className="row no-gutters bg-light position-relative">
+                        {/* img */}
+                        <div className="col-md-6 mb-md-0 p-md-4">
+                            <img src={bitdegree} className="w-100" alt="codecademy online"/>
+                        </div>
+                        {/* Title, Caption, Link */}
+                        <div className="col-md-6 position-static p-4 pl-md-0">
+                            <h5 className="mt-0">BitDegree</h5>
+                            <p>Looking for the best online courses? Click here and gain or improve digital skills on our eLearning platform. Enroll in the best online courses today!</p>
+                            <a href="https://www.bitdegree.org/learn/" target="_blank" rel="noopener noreferrer" className="stretched-link">Visit BitDegree</a>
+                        </div>
+                    </div>
+
                     {/* CODECADEMY */}
                     <div className="row no-gutters bg-light position-relative">
                         {/* img */}
@@ -76,6 +101,21 @@ function Resources() {
                         </div>
                     </div>
 
+                    {/* sololearn */}
+                    <div className="row no-gutters bg-light position-relative">
+                        {/* img */}
+                        <div className="col-md-6 mb-md-0 p-md-4">
+                            <img src={sololearn} className="w-100" alt="edX"/>
+                        </div>
+                        {/* Title, Caption, Link */}
+                        <div className="col-md-6 position-static p-4 pl-md-0">
+                            <h5 className="mt-0">SoloLearn</h5>
+                            <p>SoloLearn is a series of free apps that allows users to learn a variety of programming languages and concepts through short lessons, code challenges, and quizzes. Lessons are written with the beginner in mind, so anyone can learn to read and write their own code.</p>
+                            <a href="https://www.sololearn.com/Courses/" target="_blank" rel="noopener noreferrer" className="stretched-link">Visit SoloLearn</a>
+                        </div>
+                    </div>
+
+
                     {/* EDX */}
                     <div className="row no-gutters bg-light position-relative">
                         {/* img */}
@@ -89,6 +129,51 @@ function Resources() {
                             <a href="https://www.edx.org/" target="_blank" rel="noopener noreferrer" className="stretched-link">Visit edX</a>
                         </div>
                     </div>
+
+                    {/* coursera */}
+                    <div className="row no-gutters bg-light position-relative">
+                        {/* img */}
+                        <div className="col-md-6 mb-md-0 p-md-4">
+                            <img src={coursera} className="w-100" alt="edX"/>
+                        </div>
+                        {/* Title, Caption, Link */}
+                        <div className="col-md-6 position-static p-4 pl-md-0">
+                            <h5 className="mt-0">Coursera</h5>
+                            <p>Join Coursera for free and learn online. Build skills with courses from top universities like Yale, Michigan, Stanford, and leading companies like Google and IBM.</p>
+                            <a href="https://www.coursera.org/courses?query=coding" target="_blank" rel="noopener noreferrer" className="stretched-link">Visit Coursera</a>
+                        </div>
+                    </div>
+
+                    {/* w3schools */}
+                    <div className="row no-gutters bg-light position-relative">
+                        {/* img */}
+                        <div className="col-md-6 mb-md-0 p-md-4">
+                            <img src={w3schools} className="w-100" alt="edX"/>
+                        </div>
+                        {/* Title, Caption, Link */}
+                        <div className="col-md-6 position-static p-4 pl-md-0">
+                            <h5 className="mt-0">w3schools</h5>
+                            <p>W3Schools is an educational website for learning web technologies online. Content includes tutorials and references relating to HTML, CSS, JavaScript, JSON, PHP, Python, AngularJS, React.js, SQL, Bootstrap, Sass, Node.js, jQuery, XQuery, AJAX, XML, Raspberry Pi, C++, C# and Java.</p>
+                            <a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer" className="stretched-link">Visit w3schools</a>
+                        </div>
+                    </div>
+
+
+                    {/* codeconquest */}
+                    <div className="row no-gutters bg-light position-relative">
+                        {/* img */}
+                        <div className="col-md-6 mb-md-0 p-md-4">
+                            <img src={code} className="w-100" alt="edX"/>
+                        </div>
+                        {/* Title, Caption, Link */}
+                        <div className="col-md-6 position-static p-4 pl-md-0">
+                            <h5 className="mt-0">codeconquest</h5>
+                            <p>Welcome to Code Conquest – a free online guide to coding for beginners. If you’re someone who wants to learn about coding, but you haven’t got a clue where to start, you’ve come to the right place. This site has all the step-by-step information you need to get started.</p>
+                            <a href="https://www.codeconquest.com/tutorials/" target="_blank" rel="noopener noreferrer" className="stretched-link">Visit codeconquest</a>
+                        </div>
+                    </div>
+
+                    
 
                 </div> 
                  

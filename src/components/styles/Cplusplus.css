@@ -1,0 +1,20 @@
+/* ============================ */
+/* C ++ STYLINGS */
+/* ============================ */
+
+.bgCplusplus {
+  background: rgba(59, 47, 194, 0.836) !important;
+  color: white !important;
+}
+
+.courseBy3 {
+  font-size: 12px;
+  color: black;
+  background: rgba(178, 191, 255, 0.659) !important;
+}
+
+/* SPACING FOR CARDS */
+
+.ides .card {
+  margin-bottom: 20px;
+}

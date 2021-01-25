@@ -1,12 +1,8 @@
-import React, {useState} from "react";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
   Navbar,
   Nav,
-  NavDropdown,
-  Form,
-  FormControl,
-  Button,
 } from "react-bootstrap";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -21,18 +17,25 @@ import PageDeleted from "./Pagedeleted";
 // languages
 import Java from "./subpages/Java";
 import Javascript from "./subpages/Javascript";
+import Python from "./subpages/Python";
 import Developers from "./subpages/Developers";
 import Resource from "./subpages/Resources";
+import Books from "./Book";
+import Programming from "./Programming";
+import Csharp from "./subpages/Csharp"
+import Cplusplus from "./subpages/Cplusplus"
+import Swift from "./subpages/Swift"
+import Typescript from "./subpages/Typescript"
+
+
+
+
+// Temp files
+import GoogleBooks from "./GoogleBooks"
+
 
 // Navbar Function, with all the dropdowns and links. 
 const NavBar = props => {
-    const [show, setShow] = useState(false);
-  const showDropdown = (e)=>{
-      setShow(!show);
-  }
-  const hideDropdown = e => {
-      setShow(false);
-  }
 
   return (
     // page router. React bootstrap navbar.
@@ -44,40 +47,18 @@ const NavBar = props => {
         variant="dark"
         // sticky="top"
       >
-        <Navbar.Brand href="/" className="navbar-brand" >spatepate</Navbar.Brand>
+        <Navbar.Brand href="/" className="navbar-brand">spatepate</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <NavDropdown title="Languages" id="collasible-nav-dropdown" 
-               show={show}
-               onMouseEnter={showDropdown} 
-               onMouseLeave={hideDropdown}>
-              <NavDropdown.Item href="/language/java">
-                Java
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/language/javascript">
-                Javascript
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/language/python">
-                Python
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/language/c#">C# Unity</NavDropdown.Item>
-              <NavDropdown.Item href="/language/html-css">
-                HTML/CSS
-              </NavDropdown.Item>
+            <Nav.Link href="/programming"><i className="fa fa-code"></i> Programming</Nav.Link>
+            <Nav.Link href="/developers"> Developers</Nav.Link>
+            <Nav.Link href="/about-us"> About</Nav.Link>
+            <Nav.Link href="/contact-us"> Contact</Nav.Link>
 
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="/developers">
-                Cool Developers
-              </NavDropdown.Item>
-            </NavDropdown>
-
-            <Nav.Link href="/about-us">About</Nav.Link>
-            <Nav.Link href="/contact-us">Contact</Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link href="/resources">Resources</Nav.Link>
+            <Nav.Link href="/resources"> Resources</Nav.Link>
             <Nav.Link eventKey={2} href="https://www.reddit.com/r/dankmemes/" target="_blank"  rel="noopener noreferrer">
               Dank memes
             </Nav.Link>
@@ -92,31 +73,83 @@ const NavBar = props => {
         <Route exact path="/">
           <Home />
         </Route>
+
         {/* About page */}
         <Route path="/about-us">
           <About />
         </Route>
+
         {/* Contact us page */}
         <Route path="/contact-us">
           <Contact />
         </Route>
 
+         {/* Routing the programming page */}
+         <Route path="/programming">
+         <Programming />
+        </Route>
+
         {/* Routing the languages */}
-        <Route path="/language/java">
+        <Route path="/language/learn-java">
           <Java />
         </Route>
+
         {/* Javascript page */}
-        <Route path="/language/javascript">
+        <Route path="/language/learn-javascript">
           <Javascript />
         </Route>
+
+        {/* Python page */}
+        <Route path="/language/learn-python">
+          <Python />
+        </Route>
+        
+        {/* C# page */}
+        <Route path="/language/learn-Csharp">
+          <Csharp/>
+        </Route>
+
+        {/* C++ page */}
+        <Route path="/language/learn-cplusplus">
+          <Cplusplus />
+        </Route>
+
+        {/* Swift page */}
+        <Route path="/language/learn-swift">
+          <Swift />
+        </Route>
+
+        {/* Kotlin page */}
+        <Route path="/language/learn-kotlin">
+          <p className="p-1 ">vist this page later, this page is under construction.</p>
+          <h2>Kotlin page coming here soon...</h2>
+        </Route>
+
+        {/* Typescript page */}
+        <Route path="/language/learn-typescript">
+          <Typescript />
+        </Route>
+
         {/* All Developers page */}
         <Route path="/developers">
           <Developers />
         </Route>
+        
         {/* course resources page. */}
         <Route path="/resources">
           <Resource/>
         </Route>
+
+        {/* course book api page  . */}
+        <Route path="/books">
+          <Books/>
+        </Route>
+
+       {/* course book api page  . */}
+       <Route path="/googlebooks">
+          <GoogleBooks/>
+        </Route>
+
         {/* 404 page */}
         <Route component={PageDeleted}/>
       </Switch>
@@ -127,3 +160,4 @@ const NavBar = props => {
 
 
 export default NavBar;
+  

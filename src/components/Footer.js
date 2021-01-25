@@ -20,13 +20,12 @@ function Footer() {
               {/* Short description */}
               <div className="footer-tex">
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Fugit, suscipit.
+                  spatepate was created to help you find the tutorial you've been looking for, so you can get started working on your personal projects.
                 </p>
               </div>
               {/* Social media links and icons */}
               <div className="footer-social-links">
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a href="https://twitter.com/justpruthvi" target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-twitter"></i>
                 </a>
                 <a href="#" target="_blank" rel="noopener noreferrer">

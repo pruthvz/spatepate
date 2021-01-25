@@ -1,0 +1,108 @@
+/* ================================================ */
+/*         PYTHON STYLING PAGE           */
+/* ================================================ */
+
+.titleBg-python {
+  background: rgba(250, 224, 75, 0.591) !important;
+  color: black !important;
+}
+.bg-ide-python {
+  background: rgba(233, 212, 108, 0.544) !important;
+}
+
+/* C# STYLING HERE AS WELL PLEASE */
+
+/* ================================================ */
+/*         C# STYLING PAGE           */
+/* ================================================ */
+.alert-custom {
+  background: #b19cd978;
+}
+
+.titleBgCSharp {
+  background: #7853bdbd !important;
+}
+
+.list-group .courseBy2 {
+  font-size: 12px;
+}
+
+.titleBgCSharpSectionTwo {
+  background: #b19cd974 !important;
+}
+
+.text-purple {
+  color: darkblue !important;
+  background: rgba(26, 57, 213, 0.109) !important;
+}
+
+.yt-title {
+  font-size: 20px !important;
+}
+
+.brackeys {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0, #f22),
+    color-stop(1, rgb(255, 104, 34))
+  );
+  background-image: gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0, #f22),
+    color-stop(0.9, #ff2),
+    color-stop(1, rgb(255, 104, 34))
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 14px !important;
+}
+
+/* GAME DEV YOUTUBE */
+.gamedev {
+  margin: 0;
+}
+
+.gamedev div {
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.gamedev div:hover {
+  transform: scale(1.05);
+  color: red;
+}
+
+#gameDeveloper {
+  padding-top: 50px !important;
+  padding-bottom: 90px;
+}
+
+.subText {
+  position: relative;
+  bottom: 20px;
+}
+
+/* IDE CARDS */
+
+.ideCard {
+  border-radius: 15px;
+  transition: 0.3s ease;
+  margin-left: 20px;
+}
+
+.ideCard img {
+  width: 150px;
+}
+
+.ideCard:hover {
+  transform: scale(1.05);
+}
+
+.ides {
+  padding-bottom: 80px;
+}

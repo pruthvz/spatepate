@@ -15,9 +15,10 @@
 }
 
 .fa-check-circle {
-  color: #17a2f2;
+  /* color: #8817f2; */
   font-size: 14px;
 }
+
 .no-order {
   font-size: 10px;
 }
@@ -29,4 +30,111 @@
 /* Only temporarly! */
 .bg-custom {
   background: rgb(231, 99, 99) !important;
+}
+
+/* NEW STYLINGS FOR THE DEVELOPERS PAGE */
+/* GAME DEV YOUTUBE */
+.gamedev {
+  margin: 0;
+}
+
+.gamedev div {
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.gamedev div:hover {
+  transform: scale(1.05);
+  color: #8817f2 !important;
+}
+
+#gameDevelopers {
+  padding-top: 80px;
+  padding-bottom: 90px;
+}
+
+.subText {
+  position: relative;
+  bottom: 20px;
+}
+
+.tick {
+  color: #8817f2 !important;
+  font-size: 14px;
+}
+
+/* UX DESIGNERS YOUTUBE */
+.designers {
+  margin: 0;
+}
+
+.designers div {
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.designers div:hover {
+  transform: scale(1.05);
+  color: #f2174e !important;
+}
+
+#designers {
+  padding-top: 80px;
+  padding-bottom: 90px;
+}
+
+.subText {
+  position: relative;
+  bottom: 20px;
+}
+
+.tick2 {
+  color: #f2174e !important;
+  font-size: 14px;
+}
+
+/* DEVELOPERS ONLY / SOFTWARE DEVELOPERS YOUTUBE */
+.developer {
+  margin: 0;
+}
+
+.developer div {
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.developer div:hover {
+  transform: scale(1.05);
+  color: #f2ad17 !important;
+}
+
+#designers {
+  padding-top: 80px;
+  padding-bottom: 90px;
+}
+
+.subText {
+  position: relative;
+  bottom: 15px;
+  color: white;
+  background: red;
+}
+
+.tick3 {
+  color: #f2ad17 !important;
+  font-size: 14px;
+}
+
+/* DISABLE LINKS STYLINGS */
+.devLinks {
+  outline: none !important;
+  text-decoration: none !important;
+}
+
+.purple {
+  color: purple;
+}
+
+.gold {
+  color: orange;
 }

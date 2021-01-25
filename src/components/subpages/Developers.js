@@ -1,10 +1,91 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 // Import Page Stylings
 import "../styles/Developers.css"
 
 
 // Developers component with all the epic YouTube developers.
 function Developers() {
+  // DEVELOPERS ARRAY
+  let developers = [
+    {name: "Dev Ed", ytlink: "https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q", tick:"tick3 fas fa-check-circle"},
+    {name: "freeCodeCamp.org", ytlink: "https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ", tick:"tick3 fas fa-check-circle"},
+    {name: "Traversy Media", ytlink: "https://www.youtube.com/channel/UC29ju8bIPH5as8OGnQzwJyA", tick:"tick3 fas fa-check-circle"},
+    {name: "Fireship", ytlink: "https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA", tick:"tick3 fas fa-check-circle"},
+    {name: "Nick White", ytlink: "https://www.youtube.com/channel/UC1fLEeYICmo3O9cUsqIi7HA", tick:"tick3 fas fa-check-circle"},
+    {name: "Kalle Hallden", ytlink: "https://www.youtube.com/channel/UCWr0mx597DnSGLFk1WfvSkQ", tick:""},
+    {name: "Will Kwan", ytlink: "https://www.youtube.com/channel/UCTjPBE9BNsmv44wgxWEy2zw", tick:""},
+    {name: "Tech With Tim", ytlink: "https://www.youtube.com/channel/UC4JX40jDee_tINbkjycV4Sg", tick:""},
+    {name: "Programming with Mosh", ytlink: "https://www.youtube.com/channel/UCWv7vMbMWH4-V0ZXdmDpPBA", tick:""},
+    {name: "Jabrils", ytlink: "https://www.youtube.com/channel/UCQALLeQPoZdZC4JNUboVEUg", tick:""},
+    {name: "TechLead", ytlink: "https://www.youtube.com/channel/UC4xKdmAXFh4ACyhpiQ_3qBw", tick:""},
+    {name: "Web Dev Simplified", ytlink: "https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw", tick:""},
+    {name: "CodingPhase", ytlink: "https://www.youtube.com/channel/UC46wWUso9H5KPQcoL9iE3Ug", tick:""},
+    {name: "Ben Awad", ytlink: "https://www.youtube.com/channel/UC-8QAzbLcRglXeN_MY9blyw", tick:""},
+    {name: "LevelUpTuts", ytlink: "https://www.youtube.com/channel/UCyU5wkjgQYGRB0hIHMwm2Sg", tick:""},
+    {name: "ProgrammingKnowledge", ytlink: "https://www.youtube.com/channel/UCs6nmQViDpUw0nuIx9c_WvA", tick:""},
+    {name: "Dani Krossing", ytlink: "https://www.youtube.com/channel/UCzyuZJ8zZ-Lhfnz41DG5qLw", tick:""},
+    {name: "Stefan Mischook", ytlink: "https://www.youtube.com/c/StefanMischook/featured", tick:""},
+    {name: "Coder Foundry", ytlink: "https://www.youtube.com/channel/UCTGgxc_jIz2z9mpfInuPHWQ", tick:""},
+    {name: "sentdex", ytlink: "https://www.youtube.com/channel/UCfzlCWGWYyIQ0aLC5w48gBQ", tick:""},
+    {name: "Devon Crawford", ytlink: "https://www.youtube.com/channel/UCDrekHmOnkptxq3gUU0IyfA", tick:""},
+    {name: "CS Dojo", ytlink: "https://www.youtube.com/channel/UCxX9wt5FWQUAAz4UrysqK9A", tick:""},
+    {name: "edureka!", ytlink: "https://www.youtube.com/channel/UCkw4JCwteGrDHIsyIIKo4tQ", tick:""},
+    {name: "Simple Snippets", ytlink: "https://www.youtube.com/channel/UCRIWTSgd7hGtZhx4RYoASEg", tick:""},
+    {name: "Udemy Tech", ytlink: "https://www.youtube.com/channel/UCU6e4MJtvlcX5DBLP1cq8hQ", tick:""},
+    {name: "howCode", ytlink: "https://www.youtube.com/channel/UCovR8D97-8qmQ8hWQW0d3ew", tick:""},
+    {name: "ForrestKnight", ytlink: "https://www.youtube.com/channel/UC2WHjPDvbE6O328n17ZGcfg", tick:""},
+    {name: "Academind", ytlink: "https://www.youtube.com/channel/UCSJbGtTlrDami-tDGPUV9-w", tick:""},
+    {name: "The Net Ninja", ytlink: "https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg", tick:""},
+    {name: "LearnCode.academy", ytlink: "https://www.youtube.com/channel/UCVTlvUkGslCV_h-nSAId8Sw", tick:""},
+    {name: "Awais Mirza", ytlink: "https://www.youtube.com/channel/UCIKbbV7ae7LAWa8cGnvjSPA", tick:""},
+    {name: "Caleb Curry", ytlink: "https://www.youtube.com/user/CalebTheVideoMaker2", tick:""},
+    // {name: "name", ytlink: "link", tick:""},
+
+  ]
+
+let gamedevelopers = [
+  {name: "Brackeys", ytlink: "https://www.youtube.com/channel/UCYbK_tjZ2OrIZFBvU6CCMiA", tick:"tick fas fa-check-circle"},
+  {name: "Dani", ytlink: "https://www.youtube.com/channel/UCIabPXjvT5BVTxRDPCBBOOQ", tick:""},
+  {name: "Blackthornprod", ytlink: "https://www.youtube.com/channel/UC9Z1XWw1kmnvOOFsj6Bzy2g", tick:""},
+  {name: "Sam Hogan", ytlink: "https://www.youtube.com/channel/UCORkUj9eaM2aDJM1VYyDDTA", tick:""},
+  {name: "Dev Duck", ytlink: "https://www.youtube.com/channel/UCKCTmact-90hXpV2ns8GSsA", tick:""},
+  {name: "Awesome Tuts", ytlink: "https://www.youtube.com/channel/UC5c-DuzPdH9iaWYdI0v0uzw", tick:""},
+  {name: "Thomas Brush", ytlink: "https://www.youtube.com/channel/UCuHVjteDW9tCb8QqMrtGvwQ", tick:""},
+  {name: "Sykoo", ytlink: "https://www.youtube.com/channel/UCNJvwJ6daLmw4_gUKTw4cSg", tick:""},
+  {name: "RealTutsGML", ytlink: "https://www.youtube.com/channel/UCOs7Q7IeuzgRyARaEqif75A", tick:""},
+  {name: "Pixel Pete", ytlink: "https://www.youtube.com/channel/UC7OO80qJzGTLOj_6-0dmOiA", tick:""},
+  {name: "BenBonk", ytlink: "https://www.youtube.com/channel/UCLO_c9nyLCwohHqovjlmpDw", tick:""},
+  {name: "ThinMatrix", ytlink: "https://www.youtube.com/channel/UCUkRj4qoT1bsWpE_C8lZYoQ", tick:""},
+  {name: "GucioDevs", ytlink: "https://www.youtube.com/channel/UC4MDTn6WkqvBfBW_4cFZp2g", tick:""},
+  {name: "GameGrind", ytlink: "https://www.youtube.com/channel/UCTY3kks3U4RDvpMX87fvo1A", tick:""},
+  {name: "Ask Gamedev", ytlink: "https://www.youtube.com/channel/UCd_lJ4zSp9wZDNyeKCWUstg", tick:""},
+  {name: "Jonas Tyroller", ytlink: "https://www.youtube.com/channel/UC_p_9arduPuxM8DHTGIuSOg", tick:""},
+  {name: "Randall", ytlink: "https://www.youtube.com/channel/UCUmLRMERmJrmUtgnbFfknAg", tick:""},
+  {name: "HeartBeast", ytlink: "https://www.youtube.com/channel/UCrHQNOyU1q6BFEfkNq2CYMA", tick:""},
+  {name: "KidsCanCode", ytlink: "https://www.youtube.com/c/KidscancodeOrg/videos", tick:""},
+  {name: "GDQuest", ytlink: "https://www.youtube.com/channel/UCxboW7x0jZqFdvMdCFKTMsQ", tick:""},
+  {name: "Mister Taft Creates", ytlink: "https://www.youtube.com/c/MisterTaftCreates", tick:""},
+  {name: "Game Endeavor", ytlink: "https://www.youtube.com/c/GameEndeavor/about", tick:""},
+  {name: "Pigdev", ytlink: "https://www.youtube.com/channel/UCFK9ZoVDqDgY6KGMcHEloFw", tick:""},
+  // {name: "name", ytlink: "link", tick:""},
+
+]
+
+let uideveloper = [
+  {name: "DesignCourse", ytlink: "https://www.youtube.com/user/DesignCourse", tick:"tick2 fas fa-check-circle"},
+  {name: "Caler Edwards", ytlink: "https://www.youtube.com/channel/UCfzOLBT7jyHFcaTgwmnttog", tick:""},
+  {name: "DesignCode", ytlink: "https://www.youtube.com/channel/UCTIhfOopxukTIRkbXJ3kN-g", tick:""},
+  {name: "The Futur", ytlink: "https://www.youtube.com/channel/UC-b3c7kxa5vU-bnmaROgvog", tick:""},
+  {name: "Flux", ytlink: "https://www.youtube.com/channel/UCN7dywl5wDxTu1RM3eJ_h9Q", tick:""},
+  {name: "CharliMarieTV", ytlink: "https://www.youtube.com/user/charlimarieTV", tick:""},
+  {name: "Maex", ytlink: "https://www.youtube.com/channel/UCSdp5logiFTM3SyLJrHabOQ", tick:""},
+  {name: "Laith Wallace", ytlink: "https://www.youtube.com/channel/UCnpdR3kXJgs2y8o_PNddZxQ", tick:""},
+  {name: "Dansky ", ytlink: "https://www.youtube.com/user/ForeverDansky", tick:""},
+  {name: "searching..", ytlink: "#", tick:""},
+  // {name: "name", ytlink: "link", tick:""},
+
+]
+
   // Change Browser Title.
   useEffect(() =>{
     document.title="Developers - spatepate"
@@ -12,275 +93,100 @@ function Developers() {
 
     return (
         <div>
-            {/* PAGE HEADER, WITH TITLE AND CAPTION start */}
-            <header className="jumbotron jumbotron-fluid bg-dark">
-                <div className="container-fluid text-center">
-                <h1 className="display-3">Epic Developers </h1>
-                <p className="lead pb-4">
-                Go subscribe to these developers, they provide great tutorials and content!
-                </p>
-                {/* <p>
-                    <a href="#lang" className="btn btn-danger btn-lg mybtn3" role="button">
-                    Scroll
-                    </a>
-                </p> */}
-                </div>
+      {/* ============================================================= */}
+      {/* PAGE HEADER, WITH TITLE AND CAPTION start */}
+        <header className="jumbotron jumbotron-fluid bg-dark">
+          <div className="container-fluid text-center">
+            <h1 className="display-3">Developers <i className="fad fa-terminal"></i>  </h1>
+            <p className="lead pb-4">
+            Go subscribe to these <span className="badge badge-danger" style={{fontSize:"15px"}}>developers</span>, they provide great tutorials and content!
+            </p>
+            {/* <p>
+             <a href="#lang" className="btn btn-danger btn-lg mybtn3" role="button">
+             Scroll
+            </a>
+            </p> */}
+          </div>
         </header>
         {/* PAGE HEADER, WITH TITLE AND CAPTION end */}
         
-        {/* DEVELOPERS SECTION START */}
-        <section className="developers">
+        
+        {/* ======================================================================== */}
+      {/* new developer feature */}
+      <section id="developers" className="bg-dark">
+        <br/>
         <div className="container">
-        <div className="col-lg-12">
-              {/* Section title, and sub-title */}
-              <div className="section-title">
-                <h1 className="title">GO SUBSCRIBE</h1>
-                <p className="subtitle">Check these amazing developers</p> 
+          <h2 className="text-center text-white">Developers</h2>
+          <center>
+          <span className="badge subText">Subscribe</span>
+          </center>
+          <div className="row col-md-12 justify-content-center developer">
+            {developers.map(function(dev, index){
+              return <div className="card rounded-pill" style={{width:"250px"}} key={index}>
+              <a href={dev.ytlink} target="_blank" rel="noopener noreferrer" style={{textDecoration:"none", color:"black"}}>
+              <div className="card-body text-center">
+              {dev.name} <i className={dev.tick}></i>
               </div>
+              </a>
             </div>
-
-          {/* Developers list START */}
-          <p className="no-order alert alert-danger col-md-12">I love all these developers, so there is no particular order!</p>
-          <div className="row">
-            <div className="col-md-12">
-              <div className="list-group">
-                  <div className="list-group-item list-group-item-action disabled bg-danger card-title">
-                    Developers 
-                    <p></p>
-                  </div>
-
-                  {/* YouTuber Name, with Verified Tick, re-directed link */}
-                  <div  className="list-group-item list-group-item-action">Dev Ed <i className="fas fa-check-circle"></i> <span className="sub-headings"> /Learn web development, web design, 3d modelling, tools like figma and more without getting bored!</span>
-                  <a href="https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">freeCodeCamp.org <i className="fas fa-check-circle"></i> <span className="sub-headings">/Learn to code for free.</span>
-                  <a href="https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div className="list-group-item list-group-item-action">Traversy Media <i className="fas fa-check-circle"></i>
-                  <a href="https://www.youtube.com/channel/UC29ju8bIPH5as8OGnQzwJyA" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">Fireship <i className="fas fa-check-circle"></i>
-                  <a href="https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">Nick White <i className="fas fa-check-circle"></i>
-                  <a href="https://www.youtube.com/channel/UC1fLEeYICmo3O9cUsqIi7HA" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div className="list-group-item list-group-item-action">Kalle Hallden <i className="fas fa-check-circle"></i>
-                  <a href="https://www.youtube.com/channel/UCWr0mx597DnSGLFk1WfvSkQ" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div className="list-group-item list-group-item-action">Will Kwan <i className="fas fa-check-circle"></i>
-                  <a href="https://www.youtube.com/channel/UCTjPBE9BNsmv44wgxWEy2zw" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">Tech With Tim <i className="fas fa-check-circle"></i>
-                  <a href="https://www.youtube.com/channel/UC4JX40jDee_tINbkjycV4Sg" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">Programming with Mosh <i className="fas fa-check-circle"></i>
-                  <a href="https://www.youtube.com/channel/UCWv7vMbMWH4-V0ZXdmDpPBA" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div className="list-group-item list-group-item-action">Jabrils <i className="fas fa-check-circle"></i>
-                  <a href="https://www.youtube.com/channel/UCQALLeQPoZdZC4JNUboVEUg" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div className="list-group-item list-group-item-action">TechLead <i className="fas fa-check-circle"></i>
-                  <a href="https://www.youtube.com/channel/UC4xKdmAXFh4ACyhpiQ_3qBw" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">Web Dev Simplified <i className="fas fa-check-circle"></i>
-                  <a href="https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">CodingPhase
-                  <a href="https://www.youtube.com/channel/UC46wWUso9H5KPQcoL9iE3Ug" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">Ben Awad
-                  <a href="https://www.youtube.com/channel/UC-8QAzbLcRglXeN_MY9blyw" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">LevelUpTuts
-                  <a href="https://www.youtube.com/channel/UCyU5wkjgQYGRB0hIHMwm2Sg" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div className="list-group-item list-group-item-action">ProgrammingKnowledge <i className="fas fa-check-circle"></i>
-                  <a href="https://www.youtube.com/channel/UCs6nmQViDpUw0nuIx9c_WvA" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">Dani Krossing
-                  <a href="https://www.youtube.com/channel/UCzyuZJ8zZ-Lhfnz41DG5qLw" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">Stefan Mischook
-                  <a href="https://www.youtube.com/c/StefanMischook/featured" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">Coder Foundry
-                  <a href="https://www.youtube.com/channel/UCTGgxc_jIz2z9mpfInuPHWQ" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">sentdex <i className="fas fa-check-circle"></i>
-                  <a href="https://www.youtube.com/channel/UCfzlCWGWYyIQ0aLC5w48gBQ" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">Devon Crawford <i className="fas fa-check-circle"></i>
-                  <a href="https://www.youtube.com/channel/UCDrekHmOnkptxq3gUU0IyfA" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div className="list-group-item list-group-item-action">CS Dojo <i className="fas fa-check-circle"></i>
-                  <a href="https://www.youtube.com/channel/UCxX9wt5FWQUAAz4UrysqK9A" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div className="list-group-item list-group-item-action">edureka! <i className="fas fa-check-circle"></i>
-                  <a href="https://www.youtube.com/channel/UCkw4JCwteGrDHIsyIIKo4tQ" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">Simple Snippets <i className="fas fa-check-circle"></i>
-                  <a href="https://www.youtube.com/channel/UCRIWTSgd7hGtZhx4RYoASEg" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div className="list-group-item list-group-item-action">Udemy Tech <i className="fas fa-check-circle"></i>
-                  <a href="https://www.youtube.com/channel/UCU6e4MJtvlcX5DBLP1cq8hQ" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">howCode
-                  <a href="https://www.youtube.com/channel/UCovR8D97-8qmQ8hWQW0d3ew" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">ForrestKnight <i className="fas fa-check-circle"></i>
-                  <a href="https://www.youtube.com/channel/UC2WHjPDvbE6O328n17ZGcfg" className="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">Academind  <i className="fas fa-check-circle"></i>
-                  <a href="https://www.youtube.com/channel/UCSJbGtTlrDami-tDGPUV9-w" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">The Net Ninja <i className="fas fa-check-circle"></i>
-                  <a href="https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">LearnCode.academy <i className="fas fa-check-circle"></i>
-                  <a href="https://www.youtube.com/channel/UCVTlvUkGslCV_h-nSAId8Sw" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">Awais Mirza
-                  <a href="https://www.youtube.com/channel/UCIKbbV7ae7LAWa8cGnvjSPA" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">Caleb Curry
-                  <a href="https://www.youtube.com/user/CalebTheVideoMaker2" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">ENTER NAME
-                  <a href="#" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-
-                </div>
-                <br/>
-            </div>
-          {/* Developers list START */}
-
-
-            {/* Game Developers START */}
-            <div className="col-md-12">
-              <div className="list-group">
-                  <div className="list-group-item list-group-item-action disabled bg-danger card-title">
-                    Game Developers 
-                  </div>
-
-                  {/* YouTuber Name, with Verified Tick, re-directed link */}
-                  <div  className="list-group-item list-group-item-action">Brackeys <i className="fas fa-check-circle"></i>
-                  <a href="https://www.youtube.com/channel/UCYbK_tjZ2OrIZFBvU6CCMiA" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">Dani <i className="fas fa-check-circle"></i>
-                  <a href="https://www.youtube.com/channel/UCIabPXjvT5BVTxRDPCBBOOQ" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">Blackthornprod <i className="fas fa-check-circle"></i>
-                  <a href="https://www.youtube.com/channel/UC9Z1XWw1kmnvOOFsj6Bzy2g" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">Sam Hogan <i className="fas fa-check-circle"></i>
-                  <a href="https://www.youtube.com/channel/UCORkUj9eaM2aDJM1VYyDDTA" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">Dev Duck 
-                  <a href="https://www.youtube.com/channel/UCKCTmact-90hXpV2ns8GSsA" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">Awesome Tuts
-                  <a href="https://www.youtube.com/channel/UC5c-DuzPdH9iaWYdI0v0uzw" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">Thomas Brush <i className="fas fa-check-circle"></i>
-                  <a href="https://www.youtube.com/channel/UCuHVjteDW9tCb8QqMrtGvwQ" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">Sykoo <i className="fas fa-check-circle"></i>
-                  <a href="https://www.youtube.com/channel/UCNJvwJ6daLmw4_gUKTw4cSg" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">RealTutsGML
-                  <a href="https://www.youtube.com/channel/UCOs7Q7IeuzgRyARaEqif75A" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">Pixel Pete
-                  <a href="https://www.youtube.com/channel/UC7OO80qJzGTLOj_6-0dmOiA" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">BenBonk
-                  <a href="https://www.youtube.com/channel/UCLO_c9nyLCwohHqovjlmpDw" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">ThinMatrix 
-                  <a href="https://www.youtube.com/channel/UCUkRj4qoT1bsWpE_C8lZYoQ" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div className="list-group-item list-group-item-action">GucioDevs
-                  <a href="https://www.youtube.com/channel/UC4MDTn6WkqvBfBW_4cFZp2g" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">GameGrind
-                  <a href="https://www.youtube.com/channel/UCTY3kks3U4RDvpMX87fvo1A" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">Ask Gamedev <i className="fas fa-check-circle"></i>
-                  <a href="https://www.youtube.com/channel/UCd_lJ4zSp9wZDNyeKCWUstg" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">Jonas Tyroller
-                  <a href="https://www.youtube.com/channel/UC_p_9arduPuxM8DHTGIuSOg" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">Randall 
-                  <a href="https://www.youtube.com/channel/UCUmLRMERmJrmUtgnbFfknAg" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">ENTER NAME
-                  <a href="#" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-<br/>
-                  {/* Godot Developers sub-list */}
-                  <div className="list-group-item list-group-item-action disabled bg-custom card-title">
-                    Godot Developers
-                  </div>
-                  <div  className="list-group-item list-group-item-action">HeartBeast
-                  <a href="https://www.youtube.com/channel/UCrHQNOyU1q6BFEfkNq2CYMA" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-               
-                  <div  className="list-group-item list-group-item-action">KidsCanCode
-                  <a href="https://www.youtube.com/c/KidscancodeOrg/videos" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-                  
-                  <div  className="list-group-item list-group-item-action">GDQuest
-                  <a href="https://www.youtube.com/channel/UCxboW7x0jZqFdvMdCFKTMsQ" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">Mister Taft Creates
-                  <a href="https://www.youtube.com/c/MisterTaftCreates" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">Game Endeavor
-                  <a href="https://www.youtube.com/c/GameEndeavor/about" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div  className="list-group-item list-group-item-action">Pigdev
-                  <a href="https://www.youtube.com/channel/UCFK9ZoVDqDgY6KGMcHEloFw" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-
-                </div>
-                <br/>
-            </div>
-            {/* Game Developers END */}
-
-            
-            {/* UI/UX Designers START */}
-            <div className="col-md-12">
-              <div className="list-group">
-                  <div className="list-group-item list-group-item-action disabled bg-danger card-title">
-                    UI/UX Designers 
-                  </div>
-
-                  {/* YouTuber Name, with Verified Tick, re-directed link */}
-                  <div className="list-group-item list-group-item-action">DesignCourse <i className="fas fa-check-circle"></i> <span className="badge badge-pill badge-primary">BEST</span>
-                  <a href="https://www.youtube.com/user/DesignCourse" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div href="#" className="list-group-item list-group-item-action">Caler Edwards <i className="fas fa-check-circle"></i>
-                  <a href="https://www.youtube.com/channel/UCfzOLBT7jyHFcaTgwmnttog"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                  <div className="list-group-item list-group-item-action">DesignCode
-                  <a href="https://www.youtube.com/channel/UCTIhfOopxukTIRkbXJ3kN-g" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-                  
-                  <div href="#" className="list-group-item list-group-item-action">ENTER NAME
-                  <a href="#" target="_blank" rel="noopener noreferrer"><span className="badge badge-danger badge-pill pull-right col-md-2">SUBSCRIBE</span></a></div>
-
-                </div>
-                <br/>
-            </div>
-            {/* UI/UX Designers END */}
-
-                {/* Add new developers that I've missed out */}
-                <p className=" alert alert-danger p-2 col-md-12">If I've missed anyone please leave a comment</p>
+            })}
+  
 
           </div>
         </div>
-        <br/>
       </section>
-      {/* DEVELOPERS SECTION END */}
+
+      {/* game dev */}
+      <section id="gameDevelopers" className="bg-dark">
+        <div className="container">
+          <h2 className="text-center text-light ">Game Developers</h2>
+          <center>
+          <span className="badge subText">Subscribe</span>
+          </center>
+          <div className="row col-md-12 justify-content-center gamedev">
+            {gamedevelopers.map(function(gamedev, index){
+              return <div className="card rounded-pill" style={{width:"250px"}} key={index}>
+              <a href={gamedev.ytlink} target="_blank" rel="noopener noreferrer" style={{textDecoration:"none", color:"black"}}>
+              <div className="card-body text-center">
+              {gamedev.name} <i className={gamedev.tick}></i>
+              </div>
+              </a>
+            </div>
+            })}
+  
+
+          </div>
+        </div>
+      </section>
+
+      {/* ui/ux developer */}
+
+      <section id="designers" className="bg-dark">
+        <div className="container">
+          <h2 className="text-center text-white">UI/UX Designers</h2>
+          <center>
+          <span className="badge subText">Subscribe</span>
+          </center>
+          <div className="row col-md-12 justify-content-center designers">
+            {uideveloper.map(function(uidev, index){
+              return <div className="card rounded-pill" style={{width:"250px"}} key={index}>
+              <a href={uidev.ytlink} target="_blank" rel="noopener noreferrer" style={{textDecoration:"none", color:"black"}}>
+              <div className="card-body text-center">
+              {uidev.name} <i className={uidev.tick}></i>
+              </div>
+              </a>
+            </div>
+            })}
+  
+
+          </div>
+        </div>
+      </section>
+        {/* ======================================================================== */}
+
+
+
+
 
       </div>
     )
