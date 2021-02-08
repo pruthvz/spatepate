@@ -47,14 +47,14 @@ const NavBar = props => {
         variant="dark"
         // sticky="top"
       >
-        <Navbar.Brand href="/" className="navbar-brand">spatepate</Navbar.Brand>
+        <Navbar.Brand href="spatepate/" className="navbar-brand">spatepate</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="/programming"><i className="fa fa-code"></i> Programming</Nav.Link>
-            <Nav.Link href="/developers"> Developers</Nav.Link>
-            <Nav.Link href="/about-us"> About</Nav.Link>
-            <Nav.Link href="/contact-us"> Contact</Nav.Link>
+            <Nav.Link href="spatepate/programming"><i className="fa fa-code"></i> Programming</Nav.Link>
+            <Nav.Link href="spatepate/developers"> Developers</Nav.Link>
+            <Nav.Link href="spatepate/about-us"> About</Nav.Link>
+            <Nav.Link href="spatepate/contact-us"> Contact</Nav.Link>
 
           </Nav>
           <Nav>
@@ -70,27 +70,27 @@ const NavBar = props => {
         {/* Page redirection. */}
       <Switch>
         {/* Home page */}
-        <Route exact path="/">
+        <Route exact path="spatepate/">
           <Home />
         </Route>
 
         {/* About page */}
-        <Route path="/about-us">
+        <Route path="spatepate/about-us">
           <About />
         </Route>
 
         {/* Contact us page */}
-        <Route path="/contact-us">
+        <Route path="spatepate/contact-us">
           <Contact />
         </Route>
 
          {/* Routing the programming page */}
-         <Route path="/programming">
+         <Route path="spatepate/programming">
          <Programming />
         </Route>
 
         {/* Routing the languages */}
-        <Route path="/language/learn-java">
+        <Route path="spatepate/language/learn-java">
           <Java />
         </Route>
 
