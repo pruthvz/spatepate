@@ -32,7 +32,7 @@ function Home() {
           <div className="row">
             <div className="col-lg-6">
               <div className="home-content">
-                <h1>Making your life easy to find tutorials</h1>
+                <h1>Quick and easy one click programming tutorials</h1>
                 <p>
                   spatepate will help you get started with the most beginner friendly tutorials to advanced. We hold no credit over the tutorials, the videos are credited along with all the documentation. We hope to search for the best tutorial, so you don't have to waste time.
                 </p>
