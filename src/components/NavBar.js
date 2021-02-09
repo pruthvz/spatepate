@@ -47,18 +47,18 @@ const NavBar = props => {
         variant="dark"
         // sticky="top"
       >
-        <Navbar.Brand href="spatepate/" className="navbar-brand">spatepate</Navbar.Brand>
+        <Navbar.Brand href="/spatepate/" className="navbar-brand">spatepate</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="spatepate/programming"><i className="fa fa-code"></i> Programming</Nav.Link>
-            <Nav.Link href="spatepate/developers"> Developers</Nav.Link>
-            <Nav.Link href="spatepate/about-us"> About</Nav.Link>
-            <Nav.Link href="spatepate/contact-us"> Contact</Nav.Link>
+            <Nav.Link href="/spatepate/programming"><i className="fa fa-code"></i> Programming</Nav.Link>
+            <Nav.Link href="/spatepate/developers"> Developers</Nav.Link>
+            <Nav.Link href="/spatepate/about-us"> About</Nav.Link>
+            <Nav.Link href="/spatepate/contact-us"> Contact</Nav.Link>
 
           </Nav>
           <Nav>
-            <Nav.Link href="/resources"> Resources</Nav.Link>
+            <Nav.Link href="/spatepate/resources"> Resources</Nav.Link>
             <Nav.Link eventKey={2} href="https://www.reddit.com/r/dankmemes/" target="_blank"  rel="noopener noreferrer">
               Dank memes
             </Nav.Link>
@@ -70,27 +70,27 @@ const NavBar = props => {
         {/* Page redirection. */}
       <Switch>
         {/* Home page */}
-        <Route exact path="spatepate/">
+        <Route exact path="/spatepate/">
           <Home />
         </Route>
 
         {/* About page */}
-        <Route path="spatepate/about-us">
+        <Route path="/spatepate/about-us">
           <About />
         </Route>
 
         {/* Contact us page */}
-        <Route path="spatepate/contact-us">
+        <Route path="/spatepate/contact-us">
           <Contact />
         </Route>
 
          {/* Routing the programming page */}
-         <Route path="spatepate/programming">
+         <Route path="/spatepate/programming">
          <Programming />
         </Route>
 
         {/* Routing the languages */}
-        <Route path="spatepate/language/learn-java">
+        <Route path="/spatepate/language/learn-java">
           <Java />
         </Route>
 
