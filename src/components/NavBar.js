@@ -5,7 +5,7 @@ import {
   Nav,
 } from "react-bootstrap";
 
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "../App.css";
 
 // Importing all pages below
@@ -51,14 +51,14 @@ const NavBar = props => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="/spatepate/programming"><i className="fa fa-code"></i> Programming</Nav.Link>
-            <Nav.Link href="/spatepate/developers"> Developers</Nav.Link>
-            <Nav.Link href="/spatepate/about-us"> About</Nav.Link>
-            <Nav.Link href="/spatepate/contact-us"> Contact</Nav.Link>
+            <Nav.Link href="/spatepate/programming" exact ><i className="fa fa-code"></i> Programming</Nav.Link>
+            <Nav.Link href="/spatepate/developers" exact> Developers</Nav.Link>
+            <Nav.Link href="/spatepate/about-us" exact> About</Nav.Link>
+            <Nav.Link href="/spatepate/contact-us" exact> Contact</Nav.Link>
 
           </Nav>
           <Nav>
-            <Nav.Link href="/spatepate/resources"> Resources</Nav.Link>
+            <Nav.Link href="/spatepate/resources" exact> Resources</Nav.Link>
             <Nav.Link eventKey={2} href="https://www.reddit.com/r/dankmemes/" target="_blank"  rel="noopener noreferrer">
               Dank memes
             </Nav.Link>
@@ -75,78 +75,78 @@ const NavBar = props => {
         </Route>
 
         {/* About page */}
-        <Route path="/spatepate/about-us">
+        <Route exact path="/spatepate/about-us">
           <About />
         </Route>
 
         {/* Contact us page */}
-        <Route path="/spatepate/contact-us">
+        <Route exact path="/spatepate/contact-us">
           <Contact />
         </Route>
 
          {/* Routing the programming page */}
-         <Route path="/spatepate/programming">
+         <Route exact path="/spatepate/programming">
          <Programming />
         </Route>
 
         {/* Routing the languages */}
-        <Route path="/spatepate/language/learn-java">
+        <Route exact path="/spatepate/language/learn-java">
           <Java />
         </Route>
 
         {/* Javascript page */}
-        <Route path="/language/learn-javascript">
+        <Route exact path="/spatepate/language/learn-javascript">
           <Javascript />
         </Route>
 
         {/* Python page */}
-        <Route path="/language/learn-python">
+        <Route exact path="/spatepate/language/learn-python">
           <Python />
         </Route>
         
         {/* C# page */}
-        <Route path="/language/learn-Csharp">
+        <Route exact path="/spatepate/language/learn-Csharp">
           <Csharp/>
         </Route>
 
         {/* C++ page */}
-        <Route path="/language/learn-cplusplus">
+        <Route exact path="/spatepate/language/learn-cplusplus">
           <Cplusplus />
         </Route>
 
         {/* Swift page */}
-        <Route path="/language/learn-swift">
+        <Route exact path="/spatepate/language/learn-swift">
           <Swift />
         </Route>
 
         {/* Kotlin page */}
-        <Route path="/language/learn-kotlin">
+        <Route exact path="/spatepate/language/learn-kotlin">
           <p className="p-1 ">vist this page later, this page is under construction.</p>
           <h2>Kotlin page coming here soon...</h2>
         </Route>
 
         {/* Typescript page */}
-        <Route path="/language/learn-typescript">
+        <Route path="/spatepate/language/learn-typescript">
           <Typescript />
         </Route>
 
         {/* All Developers page */}
-        <Route path="/developers">
+        <Route exact path="/spatepate/developers">
           <Developers />
         </Route>
         
         {/* course resources page. */}
-        <Route path="/resources">
+        <Route exact path="/spatepate/resources">
           <Resource/>
         </Route>
 
         {/* course book api page  . */}
-        <Route path="/books">
+        <Route exact path="spatepate/books">
           <Books/>
         </Route>
 
        {/* course book api page  . */}
-       <Route path="/googlebooks">
+       <Route exact path="spatepate/googlebooks">
           <GoogleBooks/>
         </Route>
 
