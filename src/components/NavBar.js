@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import {
   Navbar,
   Nav,
+  NavItem
 } from "react-bootstrap";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
@@ -51,14 +52,14 @@ const NavBar = props => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="/spatepate/programming" exact ><i className="fa fa-code"></i> Programming</Nav.Link>
-            <Nav.Link href="/spatepate/developers" exact> Developers</Nav.Link>
-            <Nav.Link href="/spatepate/about-us" exact> About</Nav.Link>
-            <Nav.Link href="/spatepate/contact-us" exact> Contact</Nav.Link>
-
+          <NavItem>   <Link className="nav-link" to="/spatepate/">Home</Link> </NavItem>
+          <NavItem>   <Link className="nav-link" to="/spatepate/programming"><i className="fa fa-code"></i> Programming</Link> </NavItem>
+          <NavItem>   <Link className="nav-link" to="/spatepate/developers">Developers</Link> </NavItem>
+          <NavItem>   <Link className="nav-link" to="/spatepate/about-us">About</Link> </NavItem>
+          <NavItem>   <Link className="nav-link" to="/spatepate/contact-us">Contact</Link> </NavItem>
           </Nav>
           <Nav>
-            <Nav.Link href="/spatepate/resources" exact> Resources</Nav.Link>
+          <NavItem>   <Link className="nav-link" to="/spatepate/resources">Resources</Link> </NavItem>
             <Nav.Link eventKey={2} href="https://www.reddit.com/r/dankmemes/" target="_blank"  rel="noopener noreferrer">
               Dank memes
             </Nav.Link>
