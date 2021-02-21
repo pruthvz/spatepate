@@ -52,11 +52,11 @@ const NavBar = props => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-          <NavItem>   <Link className="nav-link" to="/spatepate/">Home</Link> </NavItem>
-          <NavItem>   <Link className="nav-link" to="/spatepate/programming"><i className="fa fa-code"></i> Programming</Link> </NavItem>
-          <NavItem>   <Link className="nav-link" to="/spatepate/developers">Developers</Link> </NavItem>
-          <NavItem>   <Link className="nav-link" to="/spatepate/about-us">About</Link> </NavItem>
-          <NavItem>   <Link className="nav-link" to="/spatepate/contact-us">Contact</Link> </NavItem>
+            <NavItem>   <Link className="nav-link" to="/spatepate/">Home</Link> </NavItem>
+            <NavItem>   <Link className="nav-link" to="/spatepate/programming"><i className="fa fa-code"></i> Programming</Link> </NavItem>
+            <NavItem>   <Link className="nav-link" to="/spatepate/developers">Developers</Link> </NavItem>
+            <NavItem>   <Link className="nav-link" to="/spatepate/about-us">About</Link> </NavItem>
+            <NavItem>   <Link className="nav-link" to="/spatepate/contact-us">Contact</Link> </NavItem>
           </Nav>
           <Nav>
           <NavItem>   <Link className="nav-link" to="/spatepate/resources">Resources</Link> </NavItem>
