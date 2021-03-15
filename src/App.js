@@ -32,15 +32,16 @@ function App() {
   return (
     <div className="App">
       {/* MAIN PAGE LAYOUT */}
-      <NavBar />
       <Router>
+        <NavBar />
+
         {/* Page redirection. */}
         <Switch>
           {/* Home page */}
           <Route path="/spatepate/" exact component={Home}></Route>
 
           {/* About page */}
-          <Route path="/spatepate/about-us" exact component={About}></Route>
+          <Route path="/spatepate/about-us" component={About}></Route>
 
           {/* Contact us page */}
           <Route path="/spatepate/contact-us" exact component={Contact}></Route>
@@ -120,8 +121,9 @@ function App() {
           {/* 404 page */}
           <Route component={PageDeleted} />
         </Switch>
+
+        <Footer />
       </Router>
-      <Footer />
     </div>
   );
 }
