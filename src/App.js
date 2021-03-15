@@ -44,19 +44,19 @@ function App() {
           <Route path="/spatepate/about-us" component={About}></Route>
 
           {/* Contact us page */}
-          <Route path="/spatepate/contact-us" exact component={Contact}></Route>
+          <Route path="/spatepate/contact-us"  component={Contact}></Route>
 
           {/* Routing the programming page */}
           <Route
             path="/spatepate/programming"
-            exact
+            
             component={Programming}
           ></Route>
 
           {/* Routing the languages */}
           <Route
             path="/spatepate/language/learn-java"
-            exact
+            
             component={Java}
           ></Route>
 
