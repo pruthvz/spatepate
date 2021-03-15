@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/spatepate/static/css/main.a6e2a4aa.chunk.css",
-    "main.js": "/spatepate/static/js/main.1ab25e2c.chunk.js",
-    "main.js.map": "/spatepate/static/js/main.1ab25e2c.chunk.js.map",
+    "main.css": "/spatepate/static/css/main.39eb5051.chunk.css",
+    "main.js": "/spatepate/static/js/main.a81a3668.chunk.js",
+    "main.js.map": "/spatepate/static/js/main.a81a3668.chunk.js.map",
     "runtime-main.js": "/spatepate/static/js/runtime-main.0e0a54b8.js",
     "runtime-main.js.map": "/spatepate/static/js/runtime-main.0e0a54b8.js.map",
     "static/css/2.d9ad5f5c.chunk.css": "/spatepate/static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.8b84c0f9.chunk.js": "/spatepate/static/js/2.8b84c0f9.chunk.js",
-    "static/js/2.8b84c0f9.chunk.js.map": "/spatepate/static/js/2.8b84c0f9.chunk.js.map",
+    "static/js/2.fccaab38.chunk.js": "/spatepate/static/js/2.fccaab38.chunk.js",
+    "static/js/2.fccaab38.chunk.js.map": "/spatepate/static/js/2.fccaab38.chunk.js.map",
     "index.html": "/spatepate/index.html",
-    "precache-manifest.fe0a8658ee5eacd02bd1fd3f22f22f3d.js": "/spatepate/precache-manifest.fe0a8658ee5eacd02bd1fd3f22f22f3d.js",
+    "precache-manifest.553ff853eca19de0515037503376f71f.js": "/spatepate/precache-manifest.553ff853eca19de0515037503376f71f.js",
     "service-worker.js": "/spatepate/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/spatepate/static/css/2.d9ad5f5c.chunk.css.map",
-    "static/css/main.a6e2a4aa.chunk.css.map": "/spatepate/static/css/main.a6e2a4aa.chunk.css.map",
-    "static/js/2.8b84c0f9.chunk.js.LICENSE.txt": "/spatepate/static/js/2.8b84c0f9.chunk.js.LICENSE.txt",
+    "static/css/main.39eb5051.chunk.css.map": "/spatepate/static/css/main.39eb5051.chunk.css.map",
+    "static/js/2.fccaab38.chunk.js.LICENSE.txt": "/spatepate/static/js/2.fccaab38.chunk.js.LICENSE.txt",
     "static/media/bitdegree.jpg": "/spatepate/static/media/bitdegree.39b330d2.jpg",
     "static/media/code.jpg": "/spatepate/static/media/code.11d911b6.jpg",
     "static/media/codecademy.png": "/spatepate/static/media/codecademy.5b78666d.png",
@@ -32,8 +32,8 @@
   "entrypoints": [
     "static/js/runtime-main.0e0a54b8.js",
     "static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.8b84c0f9.chunk.js",
-    "static/css/main.a6e2a4aa.chunk.css",
-    "static/js/main.1ab25e2c.chunk.js"
+    "static/js/2.fccaab38.chunk.js",
+    "static/css/main.39eb5051.chunk.css",
+    "static/js/main.a81a3668.chunk.js"
   ]
 }
