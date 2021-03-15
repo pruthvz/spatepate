@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 
 function Typescript() {
     return (
@@ -62,36 +63,36 @@ function Typescript() {
 
               {/* IDE CARDS */}
               <div className="card ideCard" style={{width:"9.5rem"}}>
-                <a href="./learn-python">
+              <Link to='./learn-python'>
                 <img className="card-img-top mx-auto rounded-2 p-3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/600px-Python-logo-notext.svg.png" alt="Card image cap" />
-                </a>
+                </Link>
                 <div className="card-body">
                   <p className="card-text">Python</p>
                 </div>
               </div>
 
               <div className="card ideCard" style={{width:"9.5rem"}}>
-                <a href="./learn-java">
+              <Link to='./learn-java'>
                 <img className="card-img-top mx-auto" src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/181_Java_logo_logos-512.png" alt="Card image cap" />
-                </a>
+                </Link>
                 <div className="card-body">
                   <p className="card-text">Java</p>
                 </div>
               </div>
 
               <div className="card ideCard" style={{width:"9.5rem"}}>
-                <a href="./learn-javascript">
+              <Link to='./learn-javascript'>
                 <img className="card-img-top mx-auto rounded p-2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/768px-JavaScript-logo.png" alt="Card image cap" />
-                </a>
+              </Link>
                 <div className="card-body">
                   <p className="card-text">JavaScript</p>
                 </div>
               </div>
 
               <div className="card ideCard" style={{width:"9.5rem"}}>
-                <a href="./learn-cplusplus">
+              <Link to='./learn-cplusplus'>
                 <img className="card-img-top mx-auto  p-2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1200px-ISO_C%2B%2B_Logo.svg.png" alt="Card image cap" />
-                </a>
+         </Link>
                 <div className="card-body">
                   <p className="card-text">C++</p>
                 </div>
@@ -99,9 +100,9 @@ function Typescript() {
 
 
               <div className="card ideCard" style={{width:"9.5rem"}}>
-                <a href="./learn-Csharp">
+              <Link to='./learn-Csharp'>
                 <img className="card-img-top mx-auto m-2" src="https://logodix.com/logo/773624.png" alt="Card image cap" />
-                </a>
+ </Link>
                 <div className="card-body">
                   <p className="card-text">C#</p>
                 </div>
@@ -109,9 +110,9 @@ function Typescript() {
       
 
               <div className="card ideCard" style={{width:"9.5rem"}}>
-                <a href="./learn-typescript">
+              <Link to='./learn-typescript'>
                 <img className="card-img-top mx-auto p-2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png" alt="typescript logo" />
-                </a>
+   </Link>
                 <div className="card-body">
                   <p className="card-text">TypeScript</p>
                 </div>

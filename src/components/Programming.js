@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./styles/Resource.css";
 import { Link } from "react-router-dom";
 
 const Programming = () => {
+     // Change the browser title.
+  useEffect(() =>{
+    document.title="spatepate - programming"
+}, [])
   const [input, setInput] = useState("");
   let programmingLanguages = [
     {

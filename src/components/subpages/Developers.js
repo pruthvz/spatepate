@@ -88,7 +88,7 @@ let uideveloper = [
 
   // Change Browser Title.
   useEffect(() =>{
-    document.title="Developers - spatepate"
+    document.title="spatepate - developers"
 }, [])
 
     return (
